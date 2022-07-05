@@ -4,8 +4,10 @@ var connection = mysql.createPool({
   port: "3306",
   user: "root",
   password: "",
-  database: "vrms_dev",
+  database: "vrms_db",
+  waitForConnections: true,
   queueLimit: 0,
+  connectTimeout: 10000,
 });
 
 module.exports = connection;
